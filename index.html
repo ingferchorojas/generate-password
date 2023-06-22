@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generar contraseña segura y aleatoria</title>
+  <!-- Incluir el favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
+  <!-- Incluir los estilos CSS de Materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Incluir los iconos de Materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta descripción SEO -->
+  <meta name="description" content="Generador de contraseñas seguras y aleatorias. Crea contraseñas con mayúsculas, minúsculas, números y símbolos.">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6 offset-m3">
+        <div class="card">
+          <div class="card-content">
+            <h4 class="center-align">Generar contraseña</h4>
+            <p class="justify">Bienvenido al generador de contraseñas seguras y aleatorias. Aquí puedes crear contraseñas con diferentes características para proteger tus cuentas y datos.</p>
+            <p class="justify">Selecciona la longitud deseada para tu contraseña y marca las opciones correspondientes a las características que deseas incluir, como mayúsculas, minúsculas, números y símbolos.</p>
+            <form>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="password-input" class="materialize-textarea" disabled></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label for="length-input">Longitud</label>
+                  <input type="number" id="length-input" min="1" max="100" value="8">
+                </div>
+              </div>
+              <div class="row wide-inputs">
+                <div class="input-field col s3">
+                  <label>
+                    <input type="checkbox" id="uppercase-check-wide" checked />
+                    <span class="right-align">Mayúsculas</span>
+                  </label>
+                </div>
+                <div class="input-field col s3">
+                  <label>
+                    <input type="checkbox" id="lowercase-check-wide" checked />
+                    <span class="right-align">Minúsculas</span>
+                  </label>
+                </div>
+                <div class="input-field col s3">
+                  <label>
+                    <input type="checkbox" id="numbers-check-wide" />
+                    <span class="right-align">Números</span>
+                  </label>
+                </div>
+                <div class="input-field col s3">
+                  <label>
+                    <input type="checkbox" id="symbols-check-wide" />
+                    <span>Símbolos</span>
+                  </label>
+                </div>
+              </div>
+              <div class="row movil-inputs">
+                <div class="input-field col s12">
+                  <label>
+                    <input type="checkbox" id="uppercase-check-movil" checked />
+                    <span class="right-align">Mayúsculas</span>
+                  </label>
+                </div>
+                <div class="input-field col s12">
+                  <label>
+                    <input type="checkbox" id="lowercase-check-movil" checked />
+                    <span class="right-align">Minúsculas</span>
+                  </label>
+                </div>
+                <div class="input-field col s12">
+                  <label>
+                    <input type="checkbox" id="numbers-check-movil" />
+                    <span class="right-align">Números</span>
+                  </label>
+                </div>
+                <div class="input-field col s12">
+                  <label>
+                    <input type="checkbox" id="symbols-check-movil" />
+                    <span>Símbolos</span>
+                  </label>
+                </div>
+              </div>
+              <div class="row wide-buttons">
+                <div class="col s12">
+                  <div class="input-field center-align button-container">
+                    <button class="waves-effect waves-light btn" id="copy-button-wide">
+                      <i class="material-icons left">content_copy</i>Copiar
+                    </button>
+                    <button class="waves-effect waves-light btn" id="reload-button-wide">
+                      <i class="material-icons left">refresh</i>Recargar
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row movil-buttons">
+                <div class="col s12">
+                  <button class="waves-effect waves-light btn" id="copy-button-movil">
+                    <i class="material-icons left">content_copy</i>Copiar
+                  </button>
+                </div>
+                <div class="col s12">
+                  <button class="waves-effect waves-light btn" id="reload-button-movil">
+                    <i class="material-icons left">refresh</i>Recargar
+                  </button>
+                </div>
+              </div>
+            </form>
+            <p class="justify">Recuerda que es importante utilizar contraseñas seguras y cambiarlas regularmente para proteger tus cuentas y datos personales.</p>
+            <p class="justify">¡Genera una contraseña segura ahora y mantén tus datos protegidos!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts JS de Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Script personalizado -->
+  <script src="script.js"></script>
+</body>
+
+</html>

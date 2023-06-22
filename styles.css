@@ -1,0 +1,44 @@
+.container,
+.button-container {
+    margin-top: 2rem;
+}
+
+.justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Estilos para ocultar elementos en dispositivos móviles */
+@media (max-width: 600px) {
+
+    .wide-inputs,
+    .wide-buttons {
+        display: none;
+    }
+}
+
+/* Estilos para mostrar elementos en dispositivos móviles */
+@media (min-width: 601px) {
+
+    .movil-inputs,
+    .movil-buttons {
+        display: none;
+    }
+}
+
+/* Estilos personalizados para botones en dispositivos móviles */
+@media (max-width: 600px) {
+    .movil-buttons {
+        margin-top: 3rem;
+    }
+
+    .movil-buttons .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .movil-buttons .btn:last-child {
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+}
