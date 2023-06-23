@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para generar una contraseña aleatoria
   function generatePassword() {
     var maxLength = 100; // Número máximo permitido
-    var minLength = 4;
+    var minLength = 1;
     var length = parseInt(lengthInput.value);
     
     // Verificar si el valor de longitud supera el máximo permitido
