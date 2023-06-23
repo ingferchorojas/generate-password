@@ -14,7 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Función para generar una contraseña aleatoria
   function generatePassword() {
+    var maxLength = 100; // Número máximo permitido
+    var minLength = 6;
     var length = parseInt(lengthInput.value);
+    
+    // Verificar si el valor de longitud supera el máximo permitido
+    if (length > maxLength) {
+      length = maxLength; // Establecer la longitud al valor máximo permitido
+      lengthInput.value = maxLength; // Actualizar el valor del input
+    }
+
+    if (length < minLength) {
+      length = minLength;
+      lengthInput.value = minLength;
+    }
+
     var useUppercase = uppercaseCheckWide.checked;
     var useLowercase = lowercaseCheckWide.checked;
     var useNumbers = numbersCheckWide.checked;
