@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para generar una contraseña aleatoria
   function generatePassword() {
     var maxLength = 100; // Número máximo permitido
-    var minLength = 6;
+    var minLength = 4;
     var length = parseInt(lengthInput.value);
     
     // Verificar si el valor de longitud supera el máximo permitido
@@ -27,6 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (length < minLength) {
       length = minLength;
       lengthInput.value = minLength;
+    }
+
+    // Verificar si el campo de entrada de longitud está vacío
+    if (isNaN(length)) {
+      passwordInput.value = ""; // Limpiar el campo de contraseña
+      return; // Salir de la función
     }
 
     var useUppercase = uppercaseCheckWide.checked;
